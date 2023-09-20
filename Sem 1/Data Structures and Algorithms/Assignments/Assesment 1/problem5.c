@@ -26,14 +26,14 @@ struct Queue* createQueue() {
 }
 
 struct Node* createNode(char* name) {
-    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
-    if (temp == NULL) {
+    struct Node* temp2 = (struct Node*)malloc(sizeof(struct Node));
+    if (temp2 == NULL) {
         fprintf(stderr, "Memory allocation failed.\n");
         exit(1);
     }
-    strcpy(temp->name, name);
-    temp->next = NULL;
-    return temp;
+    strcpy(temp2->name, name);
+    temp2->next = NULL;
+    return temp2;
 }
 
 void enqueue(struct Queue* queue, char* name) {
@@ -52,13 +52,13 @@ char* dequeue(struct Queue* queue) {
         fprintf(stderr, "Queue is empty\n");
         exit(1);
     }
-    struct Node* temp = queue->front;
+    struct Node* temp2 = queue->front;
     queue->front = (queue->front)->next;
     if (queue->front == NULL) {
         queue->rear = NULL;
     }
-    strcpy(r_name, temp -> name);
-    free(temp);
+    strcpy(r_name, temp2 -> name);
+    free(temp2);
     return r_name;
 }
 
