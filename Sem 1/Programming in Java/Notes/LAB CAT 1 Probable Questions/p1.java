@@ -1,6 +1,6 @@
 /*
  * WAP to read the rainfall recorded in 3 districts for the last 3 days through command line arguments and store it in a 2D array of type float. 
- * Display the highest rainfall in each district
+ * Display the highest rainfall in each district.
  */
 
 class p1{
