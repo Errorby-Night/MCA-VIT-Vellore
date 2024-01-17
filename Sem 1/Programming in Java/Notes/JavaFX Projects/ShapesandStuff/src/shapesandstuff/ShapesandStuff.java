@@ -20,7 +20,7 @@ public class ShapesandStuff extends Application{
 
     @Override
     public void start(Stage pstage){
-        /* Blue Cross
+        
         Rectangle r = new Rectangle();
         Rectangle s = new Rectangle();
         r.setX(100.0);
@@ -32,9 +32,9 @@ public class ShapesandStuff extends Application{
         s.setWidth(300.0);
         s.setHeight(100.0);
         r.setFill(Color.BLUE);
-        s.setFill(Color.BLUE);*/
+        s.setFill(Color.BLUE);
         
-        Polygon pent = new Polygon();
+        /*Polygon pent = new Polygon();
         double x = 100.0;
         double y = 100.0;
         double r = 100.0;
@@ -45,10 +45,11 @@ public class ShapesandStuff extends Application{
             double yi = y + Math.sin(angle) * r;
             pent.getPoints().addAll(xi, yi);
         }
-        pent.setFill(Color.RED);
+        pent.setFill(Color.BLACK);*/
         
         StackPane root = new StackPane();
-        root.getChildren().add(pent);
+        root.getChildren().add(r);
+        root.getChildren().add(s);
         //root.getChildren().add(r);
         Scene sc = new Scene(root, 500, 500);
         pstage.setScene(sc);

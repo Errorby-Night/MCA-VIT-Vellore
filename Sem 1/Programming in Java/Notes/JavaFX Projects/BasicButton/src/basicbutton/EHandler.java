@@ -21,6 +21,6 @@ public class EHandler implements EventHandler<ActionEvent>{
     }
     @Override
     public void handle(ActionEvent e){
-        tf.setText("Fuck You Nigga!");
+        tf.setText("Hehe!");
     }
 }
