@@ -8,6 +8,7 @@ def calc(n):
             x = dic_vals[x]
         s += str(x)
         n //=17
+        
     return s[::-1]
 
 def main():
