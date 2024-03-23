@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Srijan Dutta<br>23MCA0131</h1>
+    <div ng-controller="LoginController">
+        <h1>Login Form</h1>
+        
+        <form name="loginForm" ng-submit="submitForm()" novalidate>
+            <div>
+                <label>Username:</label>
+                <input type="text" name="username" ng-model="user.username" required>
+                <span class="error" ng-show="loginForm.username.$dirty && loginForm.username.$invalid">Username is required.</span>
+            </div>
+            
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password" ng-model="user.password" required>
+                <span class="error" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">Password is required.</span>
+            </div>
+            
+            <button type="submit" ng-disabled="loginForm.$invalid">Login</button>
+        </form>
+        
+        <p ng-if="submitted && loginForm.$valid">Form submitted successfully!</p>
+    </div>
+
+    <script>
+        angular.module('loginApp', [])
+            .controller('LoginController', ['$scope', function($scope) {
+                $scope.user = {};
+                $scope.submitted = false;
+
+                $scope.submitForm = function() {
+                    $scope.submitted = true;
+                    if ($scope.loginForm.$valid) {
+                        // Here you can perform login authentication
+                        console.log('Username:', $scope.user.username);
+                        console.log('Password:', $scope.user.password);
+                    }
+                };
+            }]);
+    </script>
+</body>
+</html>

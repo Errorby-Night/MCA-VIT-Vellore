@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="employeeApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <h1>Srijan Dutta<br>23MCA0131</h1>
+    <div ng-controller="EmployeeController">
+        <h1>Employee Management</h1>
+        <input type="text" ng-model="searchName" placeholder="Search by name">
+        <input type="number" ng-model="searchSalary" placeholder="Search by salary">
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | filter: {name: searchName, salary: searchSalary}">
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.salary | currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        angular.module('employeeApp', [])
+            .controller('EmployeeController', ['$scope', function($scope) {
+                $scope.employees = [
+                    { name: 'Srijan Dutta', salary: 500000 },
+                    { name: 'Shubhangi Rastogi', salary: 60000 },
+                    { name: 'Sidhant Sharma', salary: 55000 },
+                    { name: 'Naman Jain', salary: 62000 },
+                ];
+            }]);
+    </script>
+</body>
+</html>

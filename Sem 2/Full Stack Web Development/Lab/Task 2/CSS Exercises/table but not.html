@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: grey;
+            }
+            .container{
+                display: flex;
+                flex-direction: row;
+            }
+            .col1{
+                display: flex;
+                flex-direction: column;
+                width: 20%;
+                text-align: center;
+                border: 2px solid yellow;
+                
+            }
+            .box{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+            }
+            .realcol1, .realcol2, .realcol3{
+                text-align: center;
+            }
+            .col2, .col3{
+                width: 100%;
+                border: 2px solid yellow;
+                height: 20%;
+            }
+            .rowbox{
+                display: flex;
+                flex-direction: row;
+                
+            }
+            .blues{
+                background-color:rgb(158, 222, 241);
+                width:100%;
+                height: 80%;
+                text-align: left;
+                border: 2px solid yellow;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="col1">
+                <p class="realcol1">Column 1</p>
+                <div class="blues">
+                    <p>A numbered list:</p>
+                    <ol type="1">
+                        <li>Able</li>
+                        <li>Baker</li>
+                        <li>Charlie</li>
+                        <li>Delta</li>
+                        <li>Echo</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box">
+                <div class="rowbox">
+                    <div class="col2" style="height: 50%;">
+                        <p class="realcol2">Column 2</p>
+                        <div  style="background-color: yellow;border: 2px solid yellow;">
+                            <p style="text-align: right;background-color: yellow;">B&nbsp;&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="col3" style="height: 50%;">
+                        <p class="realcol3">Column 3</p>
+                        <div  style="width: 100%;border: 2px solid yellow; background-color: red;">
+                            <p style="text-align: center; background-color: red;">C</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col4" style="border: 2px solid yellow; background-color: green; height: 80%;">
+                    <p>An unnumbered list:</p>
+                    <ul>
+                        <li>Pounds</li>
+                        <li>Dollars</li>
+                        <li>Euro</li>
+                        <li>Yen/li>
+                        <li>Roubles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

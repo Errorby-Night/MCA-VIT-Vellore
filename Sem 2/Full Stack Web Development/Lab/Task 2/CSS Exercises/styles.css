@@ -1,0 +1,17 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#styled-text {
+    color: darkred;
+    font-size: 50vw; /* Using viewport width for responsive text size */
+    text-transform: lowercase;
+}

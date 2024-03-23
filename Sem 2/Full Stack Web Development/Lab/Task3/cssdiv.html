@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+        .col1{
+            background-color: blue;
+            height: 200px;
+            width: 50px;
+        }
+        .col2{
+            background-color: yellow;
+            height: 200px;
+            width: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+        .col3{
+            background-color: red;
+            height: 200px;
+            width: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+        .subdiv{
+            background-color: green;
+            height: 50px;
+            width: 150px;
+            align-self: flex-end;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="col1"></div>
+            <div class="col2">
+                <div class="subdiv"></div>
+            </div>
+            <div class="col3">
+                <div class="subdiv"></div>
+            </div>
+        </div>
+    </body>
+</html>
+

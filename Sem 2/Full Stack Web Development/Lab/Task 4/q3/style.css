@@ -1,0 +1,61 @@
+body
+{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: gray;
+}
+.main
+{
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.heading
+{
+    text-align: center;
+}
+.navMain
+{
+    display: flex;
+}
+a
+{
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 2rem;
+}
+.navBox
+{
+    background-color: black;
+    margin: 3px;
+}
+.summary
+{
+    display: flex;
+}
+.score
+{
+    display: flex;
+    width: 50%;
+}
+.rating
+{
+    background-color: green;
+    width: 50%;
+    margin: 5px;
+    height: 70%;
+}
+.metascore
+{
+    text-align: center;
+    font-size: 30pt;
+    padding: 20px;
+    color: white;
+}
+img
+{
+    width: 50%;
+}

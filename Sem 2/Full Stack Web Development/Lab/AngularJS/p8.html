@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dateApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Display</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <h1>Srijan Dutta<br>23MCA0131</h1>
+    <div ng-controller="DateController">
+        <h1>Date Display</h1>
+        
+        <p>Current Date: {{ currentDate | date : 'fullDate' }}</p>
+        
+        <p>Formatted Date: {{ currentDate | date : dateFormat }}</p>
+        
+        <label>Date Format: </label>
+        <select ng-model="dateFormat">
+            <option value="fullDate">Full Date</option>
+            <option value="shortDate">Short Date</option>
+            <option value="mediumDate">Medium Date</option>
+            <option value="longDate">Long Date</option>
+        </select>
+    </div>
+
+    <script>
+        angular.module('dateApp', [])
+            .controller('DateController', ['$scope', function($scope) {
+                $scope.currentDate = new Date();
+                $scope.dateFormat = 'fullDate';
+            }]);
+    </script>
+</body>
+</html>
